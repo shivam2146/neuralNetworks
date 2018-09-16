@@ -2,7 +2,7 @@ import random
 import numpy as np
 from matplotlib import pyplot as plt
 
-sigmoid = lambda x: 1 if(x>=0) else 0
+signum = lambda x: 1 if(x>=0) else 0
 
 
 training_data = np.array([[np.array([0,0,1]),0],
@@ -19,7 +19,7 @@ print("initial weights:",weight)
 for i in range(iterations):
     x,y = random.choice(training_data)
     result = np.dot(x,weight)
-    error = y - sigmoid(result)
+    error = y - signum(result)
     errors.append(error)
     weight+= learning_rate * error * x
 print("final weights:",weight)
