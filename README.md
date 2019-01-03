@@ -1,1 +1,1 @@
-#python codes for various neural network class assignment
+## python implementations of various Neural Network class assignment.
